@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-jose
+bcrypt==4.0.1
+passlib[bcrypt]
+requests
+prometheus-client
+python-dotenv
+pytest
+httpx
