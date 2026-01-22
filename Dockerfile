@@ -1,5 +1,6 @@
 # -------- Builder stage --------
-FROM python:3.12-slim AS builder
+# -------- Builder stage --------
+FROM python:3.12-slim-bookworm AS builder
 
 WORKDIR /install
 
@@ -9,9 +10,8 @@ RUN pip install --upgrade pip \
     && pip install --no-cache-dir --prefix=/install -r requirements.txt
 
 # -------- Runtime stage --------
-FROM python:3.12-slim
+FROM python:3.12-slim-bookworm
 
-# Create non-root user
 # Create non-root user
 RUN apt-get update && apt-get upgrade -y \
     && rm -rf /var/lib/apt/lists/* \
