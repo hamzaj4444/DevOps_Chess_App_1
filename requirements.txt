@@ -1,6 +1,6 @@
 fastapi
 uvicorn
-python-jose[cryptography]
+pyjwt
 bcrypt==4.0.1
 passlib[bcrypt]
 requests
