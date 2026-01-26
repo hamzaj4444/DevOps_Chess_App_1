@@ -12,11 +12,15 @@ from app.metrics import (
 )
 from app.logger import logger
 from app.chess.routes import router as chess_router
+from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
 # Include chess router
 app.include_router(chess_router)
+
+# Serve static files for chess game
+app.mount("/game", StaticFiles(directory="app/static/chess", html=True), name="chess-game")
 
 @app.middleware("http")
 async def metrics_middleware(request: Request, call_next):

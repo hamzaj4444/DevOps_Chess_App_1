@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Agains Hamza Chess Bot</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+</head>
+
+<body>
+    <div class="glass-container">
+        <header>
+            <h1>Play against Hamza Chess Bot</h1>
+            <p class="subtitle">Trained on 1M Master Positions & My Personal Style</p>
+        </header>
+
+        <main>
+            <div class="game-area">
+                <div id="board" class="chess-board">
+                    <!-- Board squares will be generated here by JS -->
+                </div>
+
+                <div class="sidebar">
+                    <div class="status-card">
+                        <div id="status" class="status-text">Your Turn</div>
+                        <div id="turn-indicator" class="indicator white"></div>
+                    </div>
+
+                    <div class="analysis-card">
+                        <h3>Bot Analysis</h3>
+                        <div id="analysis-output" class="analysis-info">
+                            Start a game to see bot predictions...
+                        </div>
+                    </div>
+
+                    <div class="controls">
+                        <button id="reset-btn" class="primary-btn">New Game</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
