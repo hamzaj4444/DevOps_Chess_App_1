@@ -1,6 +1,6 @@
 # DevOps Chess App ♟️
 
-A full-stack DevOps showcase involving a FastAPI backend, a Chess Bot powered by a Neural Network (PyTorch), and a complete monitoring/logging stack (Prometheus, Loki, Grafana).
+A full-stack DevOps showcase involving a FastAPI backend, a Chess Bot powered by a Neural Network (PyTorch) train from scratch to play Chess just Like me, and a complete monitoring/logging stack (Prometheus, Loki, Grafana).
 
 ## Features
 
