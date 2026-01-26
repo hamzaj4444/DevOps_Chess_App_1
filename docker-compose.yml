@@ -11,6 +11,12 @@ services:
     networks:
       - backend
     restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+        reservations:
+          memory: 1G
 
   nginx:
     image: nginx:alpine

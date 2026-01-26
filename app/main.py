@@ -11,8 +11,12 @@ from app.metrics import (
     CHESS_API_ERRORS
 )
 from app.logger import logger
+from app.chess.routes import router as chess_router
 
 app = FastAPI()
+
+# Include chess router
+app.include_router(chess_router)
 
 @app.middleware("http")
 async def metrics_middleware(request: Request, call_next):

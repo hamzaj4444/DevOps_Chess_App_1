@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Tests
+.pytest_cache/
+trivy-results.sarif
+
+# IDEs
+.vscode/
+.idea/
