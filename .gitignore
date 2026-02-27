@@ -12,3 +12,8 @@ trivy-results.sarif
 # IDEs
 .vscode/
 .idea/
+
+# Screenshots
+*.png
+*.jpg
+*.jpeg
