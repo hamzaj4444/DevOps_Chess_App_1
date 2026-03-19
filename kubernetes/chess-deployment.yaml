@@ -20,6 +20,7 @@ spec:
       containers:
         - name: chess-app
           image: hamzaj4444/devops-chess-app:latest
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000
           env:

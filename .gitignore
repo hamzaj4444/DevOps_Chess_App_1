@@ -17,3 +17,4 @@ trivy-results.sarif
 *.png
 *.jpg
 *.jpeg
+report_venv/
