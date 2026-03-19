@@ -102,18 +102,3 @@ jobs:
         with:
           name: trivy-results
           path: trivy-results.sarif
-
-  deploy:
-    needs: security-scan
-    runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-
-    steps:
-      - name: Trigger Render Deploy Hook
-        run: |
-          curl -s -X POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}" \
-            -H "Content-Type: application/json" \
-            --fail \
-            --show-error
-        # This webhook URL is provided by Render after creating the service.
-        # Add it as a GitHub secret named RENDER_DEPLOY_HOOK_URL.
